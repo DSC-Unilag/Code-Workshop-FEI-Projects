@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainBody{
+    height: 100%;
+}
+.navBar{
+    height: 10vh;;
+    width: 100%;
+    position: fixed;
+    top:0; 
+    background-color: gold;
+    display: flex;
+    
+}
+.logo{
+    width:30%;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5em;
+    font-family: cursive;
+    font-size: 2.8em;
+    color: black
+}
+.navList{
+    margin-left: 5%;
+    width: 65%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+.navList li{
+    display: inline;
+}
+.navList li a{
+    text-decoration: none;
+    color:#de45af;
+    font-size: 1.1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif 
+}
+.navList li a::before{
+    content: '';
+    display: block;
+    background: #de45af;
+    height: 4px;
+    width: 0%;
+    top: 0px;
+    transition: all 1s;
+}
+.navList li a:hover{
+    color: black;
+    cursor: pointer;
+}
+.navList li a:hover::before{
+    width:100%;
+}
+.Story{
+    padding-left:5%;
+    padding-right:5%;
+    background-color: #F1F1EF;
+    display: grid;
+    padding-top:10em;
+    padding-bottom: 5em;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap:20px
+}
+a{
+    text-decoration: none
+}
+.headLines{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 20px
+}
+.img_1{
+    width: 100%;
+    height: 250px;
+}
+.sub_1, .sub_2{
+    padding-top:1.5em;
+    background-color: white;
+    padding:0em 0em 1em 0.5em;
+    color: #5172a0
+}
+.sub_1 h2, .sub_2 p{
+    margin-top:1em;
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif
+}
+hr {
+    margin-top: 0.2em;
+    max-width: 40px;
+    border: none;
+    border-top: 2px solid black;
+}
+.img_2{
+    width:100%
+}
+.head_2{
+    margin-bottom: 1em
+}
+.head_3{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap
+}
+.head_3 img{
+    width: 30%;
+    height: 150px;
+}
+.sub_3{
+    padding-left:2em;
+    background-color: white;
+    width:60%;
+    height: 150px;
+    color: #5172a0
+}
+.head_1:hover, .head_2:hover, .head_3:hover{
+    transform: scale(1.05)
+}
+.sub_3 p{
+    margin-top:  1em;
+    font-size: 1.3em;
+    font-family: 'Times New Roman', Times, serif;
+}
+.latestStories{
+    background-color: white;
+    height: 75vh;
+    padding:0.3em 0em 1em 0.5em
+}
+.head_4{
+    margin-bottom: 2em
+}
+.latestStories p {
+    margin:1em 0em 1em 0em;
+    font-size: 1em;
+    font-family: 'Times New Roman', Times, serif;
+    color: black
+}
+.latestStories p:hover{
+    transform: scale(1.02)
+}
+.Story{
+    font-family: 'Dosis' 
+}
+.categories{
+    padding:5em 0em 5em 0em
+}
+.politics, .business, .health, .sports, .tech{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.business, .health, .sports, .tech{
+    margin-top:2em
+}
+.politics h2, .business h2, .health h2, .sports h2, .tech h2{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: #de45af;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+}
+.card_1 {
+    width:25em;
+    margin:0em 1.2em 2em 1.2em
+}
+.card_1 a{
+    float: right;
+    color: #5172a0;
+    font-family: cursive;
+    font-size: 1em
+}
+.card_1 a:hover, .card_1 h5:hover{
+    text-decoration-line: underline
+}
+.card_1 h5{
+    margin-top:1em;
+    margin-bottom: 1em;
+    color:rgb(75, 73, 73);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em
+}
+.card_1 img{
+    width: 100%
+}
+footer{
+    background: #000410;
+    text-align: center;
+    color:grey;
+    padding:2em 0em 2em 0em
+}
+footer p{
+    font-size: 1.5em
+}
