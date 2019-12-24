@@ -1,0 +1,312 @@
+:root{
+    --primary:#ddd;
+    --dark:#333;
+    --light:#fff;
+    --shadow:0 1px 5px rgba(104, 104, 104, 0.8);
+}
+body{
+    margin-top: auto;
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+}
+.marq{
+    color: red;
+}
+header{
+    width: 100%;
+    position: fixed;
+    padding:10px;
+    display: grid;
+    grid-template-areas: 
+    'img . . search'
+    'img . . nav';
+    grid-column-gap: 90px;
+    background-color: darkblue;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+.img{
+    grid-area: img;
+    margin-top: 30px;
+    width: 200px;
+    height: 100px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+input.search::placeholder{
+    text-align: center;
+    /* margin-left: 10px; */
+}
+input.search{
+    margin-top: 30px;
+    height: 30px;
+    width: 200px;
+    grid-area: search;
+    background-color: var(--primary);
+    border:none;
+    border-radius: 5px;
+    margin-left: 100px;
+    outline: none;
+}
+nav{
+    margin-left: 20px;
+    margin-top: 40px;
+    grid-area: nav;
+    display:flex;
+}
+nav p{
+    margin-right: 30px;
+}
+.wrapper{
+    position: relative;
+    top: 190px;
+}
+.bannerImg{
+    /* position: relative; */
+    /* top:200px; */
+    /* display: flex; */
+    width: 100%;
+    height: 250px;
+}
+#main{
+    /* display: flex; */
+    display: grid;
+    /* grid-template-columns: 3fr 1fr; */
+    grid-gap: 10px;
+    grid-template-areas:  
+        'late . . .'
+        'world tech sport newsLetter'
+        'edu health ent newsLetter'
+        'science reli . newsLetter';
+    /* background-color: var(--primary);  */
+    padding: 10px;
+}
+.late{
+    grid-area: late;
+}
+.foreign{
+    grid-area: world;
+}
+.tech{
+    grid-area: tech;
+}
+.sport{
+    grid-area: sport;
+}
+.newsLetter{
+    margin-top: 0px;
+    padding: 10px;
+    grid-area: newsLetter;
+    border-left: 1px solid var(--dark);
+}
+.trending{
+    grid-area: trending;
+}
+.science{
+    grid-area: science;
+}
+.edu{
+    grid-area: edu;
+}
+.health{
+    grid-area: health;
+    /* display: grid; */
+    /* grid-template-areas:  */
+    /* 'img he' */
+}
+.ent{
+    grid-area: ent;
+}
+.reli{
+    grid-area: reli;
+}
+a.trend{
+    color:red;
+}
+.health img{
+    /* grid-area: img; */
+    /* width: 100px; */
+    /* height: 100px; */
+    /* float: left; */
+    /* margin-right: 10px; */
+}
+footer{
+    background-color: black;
+    color: var(--light);
+    padding: 10px;
+    display: grid;
+    grid-template-areas: 
+    'address cat1 cat2 cat3 cat4 cat5'
+    'connect last . . . .';
+}
+.address{
+    grid-area: address;
+}
+.cat1{
+    grid-area: cat1;
+}
+.cat2{
+    grid-area: cat2;
+}
+.cat3{
+    grid-area: cat3;
+}
+.cat4{
+    grid-area: cat4;
+}
+.cat5{
+    grid-area: cat5;
+}
+.connect{
+    grid-area: connect;
+}
+.last{
+    grid-area: last;
+}
+a.more{
+    color: black;
+}
+form{
+    grid-area: form;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--dark);
+    margin-top: 80px;
+    padding: 10px;
+}
+.formp{
+    margin-left: 40px;
+}
+fieldset{
+    border: 1px solid gray;
+}
+form p, input{
+    margin-left: 20px;
+}
+input{
+    border: none;
+    border-radius: 5px;
+    /* background-color: grey; */
+}
+.btn{
+    padding: 3px;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    margin-top: 20px;
+    width: 170px;
+}
+.btn:hover{
+    background-color: var(--light);
+    color: black;
+    cursor: pointer;
+}
+.newsAd1{
+    grid-area: newsAd1;
+}
+.newsAd2{
+    grid-area: newsAd2;
+}
+.newsAd3{
+    grid-area: newsAd3;
+}
+.newsAd1, .newsAd2, .newsAd3{
+    margin-top: 30px;
+    padding: 20px;
+    width: 200px;
+    height: 100px;
+    background-image: url(./pictures/pexels-photo-1059118.jpeg);
+}
+@media (max-width:900px){
+    #main{
+        grid-template-areas:
+        'late . .'
+        'world tech newsLetter'
+        'sport edu newsLetter'
+        'health ent newsLetter'
+        'science reli newsLetter'; 
+    }
+    .wrapper{
+        top: 190px;
+    }
+    header{
+        grid-template-areas:
+        'img . search'
+        'img . nav';
+        grid-column-gap: 0px;
+    }
+}
+
+@media (max-width:700px){
+    #main{
+        grid-template-areas:
+        'late .'
+        'world tech'
+        'sport edu'
+        'health ent'
+        'science reli'
+        'newsLetter .'; 
+    }
+    .wrapper{
+        top: 310px;
+    }
+    header{
+        grid-template-areas:
+        'img'
+        'nav'
+        'search';
+        /* grid-column-start: auto; */
+    }
+    input.search{
+        margin-left: 120px;
+    }
+    nav{
+        margin-left: 70px;
+    }
+    .img{
+        margin-left: 120px;
+    }
+}
+
+@media (max-width:400px){
+    #main{
+        grid-template-areas:
+        'late'
+        'world'
+        'tech'
+        'sport'
+        'edu'
+        'health'
+        'ent'
+        'science'
+        'reli'
+        'newsLetter' ;
+    }
+    .wrapper{
+        top: 310px;
+    }
+    header{
+        grid-template-areas:
+        'img'
+        'nav'
+        'search';
+        /* grid-column-start: auto; */
+    }
+    input.search{
+        margin-left: 0px;
+    }
+    nav{
+        margin-left: 0px;
+    }
+    .img{
+        margin-left: 0px;
+    }
+}
+/*
+'late . . .'
+'world tech sport newsLetter'
+'edu health ent newsLetter'
+'science reli . newsLetter';
