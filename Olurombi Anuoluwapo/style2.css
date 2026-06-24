@@ -1,0 +1,43 @@
+.logo{
+    width:100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-left: 0%;
+}
+.navBar{
+    flex-wrap: wrap;
+}
+.navList{
+    margin-left: 0%;
+    width: 100%
+}
+.navList li a{
+    font-size: 0.7em;
+}
+.headLines{
+    grid-column: 1/ 4
+}
+.latestStories{
+    grid-row:4 / 5;
+    grid-column: 1 / 4
+}
+.headlines_2{
+    grid-row: 3/ 4;
+    grid-column:1 / 4
+}
+.head_3 img{
+    display: none
+}
+.sub_3{
+    padding-left:0.5em;
+    width:100%;
+}
+.business, .health, .sports, .tech{
+    margin-top:1em
+}
+.card_1 h5{
+    font-size: 0.8em
+}
+footer p{
+    font-size: 1em
+}
